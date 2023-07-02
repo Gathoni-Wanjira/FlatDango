@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlatDango Movies App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body> 
+    <header>
+        <nav>FLATIRON MOVIE THEATRE.</nav>
+    </header>
 
     <section id="all-movies">
-
+<h2>LIST OF MOVIES</h2>
         <ul>
-            <li>Movies</li>
-            <li>Movies</li>
-            <li>Movies</li>
-            <li>Movies</li>
-            <li>Movies</li>
+         
         </ul>
 
     </section>
 
-    <section id="Movie-display">
+    <section id="movie-display">
 
-        <h1>movie-title</h1>
-        <img alt="Movie-image">
-        <p>Movie-description</p>
-        
+        <h1 id="Movie-Title">AVAILABLE MOVIES</h1>
+        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1vdmllJTIwc2hvcCUyMHBvc3RlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Movie-image" id="movie-image">
+        <p id="movie-description">Lights, camera, action... in your home!</p>
     </section>
 
 
-    <section id="Movie-details">
+    <section id="movie-details">
+        <h1>MOVIE DETAILS</h1>
+        <p id="movie-runtime">RUNTIME :<span> 40 </span> Minutes</p>
+        <P id="movie-showtime">SHOWTIME :<span> 2:35 </span></P>
+        <h4>Available Tickets: <span id="available-tickets">20 </span> Tickets</h4>
+        <button id="BuyTicket-btn">BUY TICKET</button>
+        <P id="remove-statement">Remove this movie from your profile.</P>
+        <button id="RemoveTicket-btn">REMOVE MOVIE</button>
 
-        <h1>Movie-Details</h1>
-        <button>BUY TICKETS</button>
 
     </section>
 </main>
 </body>
+<script src="script.js"></script>
 </html>
