@@ -5,6 +5,25 @@ body {
     justify-content: space-between;
     padding: 50px;
     gap: 150px;
+    padding-top: 100px;
+}
+header {
+    display: flex;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: azure;
+    height: 70px;
+    color: rgb(173, 72, 72);
+    left: 0;
+
+}
+
+header nav {
+    font-weight: 300;
+
 }
 
 #all-movies {
@@ -26,6 +45,9 @@ body {
     height: 400px;
     width: 500px;
 
+}
+#movie-display img {
+    border-radius: 10px;
 }
 
 #movie-display h1 {
