@@ -4,22 +4,73 @@ body {
     color: azure;
     justify-content: space-between;
     padding: 50px;
-    gap: 200px;
+    gap: 150px;
 }
 
-.all-movies li{
+#all-movies {
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 20px;
+    border-style: double;
+    
+}
+#all-movies li{
 
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 20px;
     font-weight: 200;
 }
 
-.movie-display h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 100px;
+#movie-display {
+    height: 400px;
+    width: 500px;
+
 }
 
-.movie-details h1 {
+#movie-display h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 100px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#movie-display img {
+    height: 100%;
+    width: 100%;
+
+}
+
+#movie-details{
+    width: 250px;
+
+}
+
+
+#movie-details h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#BuyTicket-btn {
+    background-color:#fff;
+    color: rgb(173, 72, 72); 
+    padding: 15px;
+    height: 50px;
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
+    
+   
+}
+#RemoveTicket-btn {
+    background-color:#fff;
+    color: rgb(173, 72, 72); 
+    padding: 15px;
+    height: 50px;
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
+    
+   
 }
