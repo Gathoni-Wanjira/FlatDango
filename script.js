@@ -59,11 +59,22 @@ function renderMovieDetails(movie) {
     movieRuntime.textContent = movie.runtime
     movieShowtime.textContent = movie.showtime
 
-    availableTickets.textContent = movie.capacity - movie.tickets_sold
+    availableTickets.textContent = movie.capacity - movie.tickets_sold 
+    movieBuyTicket.addEventListener('click', buyMovieTicket)
+    removeBuyTicket.addEventListener('click', removeMovieProfile)
 
 
 
 
 }
 
+function buyMovieTicket (event) {
+    console.log(event.target)
+}
 
+function isMovieSoldOut (movie) {
+   return movie.capacity === movie.tickets_sold
+
+   
+
+}
