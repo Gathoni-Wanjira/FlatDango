@@ -34,8 +34,30 @@ function fetchMoviesbyId (id){
     .then(res => res.json())
     .then(movie => {
         console.log(movie);
+        renderMovieDetails(movie)
     
     })
+
+}
+function renderMovieDetails (movie){
+    // Dynamic nodes 
+    
+    const movieTitle = document.querySelector("#Movie-Title")
+    const movieImage = document.querySelector("#movie-image")
+    const movieDescription = document.querySelector("#movie-description")
+
+    const movieRuntime = document.querySelector("#movie-runtime span")
+    const movieShowtime = document.querySelector("#movie-showtime span")
+    const movieBuyTicket = document.querySelector("#BuyTicket-btn")
+    const removeBuyTicket = document.querySelector("#RemoveTicket-btn")
+    
+movieTitle.textContent = movie.title
+movieImage.src = movie.poster
+movieDescription.textContent = movie.description
+
+
+     
+
 
 }
 
