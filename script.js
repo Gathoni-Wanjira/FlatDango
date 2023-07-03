@@ -11,7 +11,7 @@ function fetchMovies() {
 fetchMovies();
 
 function displayAllMovies(movies) {
-  movies.forEach((movie) => {
+  movies.forEach((movie, index) => {
     // Create Dynamic Nodes
     const list = document.createElement("li");
 
@@ -20,6 +20,10 @@ function displayAllMovies(movies) {
     list.id = movie.id;
     list.addEventListener("click", seeMovieDetails);
     allMovies.appendChild(list);
+
+    if(index === 0){
+        renderMovieDetails(movie)
+    }
   });
 }
 
@@ -55,6 +59,7 @@ function renderMovieDetails(movie) {
   movieShowtime.textContent = movie.showtime;
 
   availableTickets.textContent = movie.capacity - movie.tickets_sold;
+  movieBuyTicket.textContent = (movie.capacity === movie.tickets_sold)? 'SOLD OUT' : 'BUY TICKET'
 
   movieBuyTicket.addEventListener("click", () => {
     // buy a ticket
@@ -69,16 +74,22 @@ function renderMovieDetails(movie) {
           "Content-Type": "application/json",
         },
       });
+
+      availableTickets.textContent = movie.capacity - movie.tickets_sold
+      movieBuyTicket.textContent = (movie.capacity === movie.tickets_sold)? 'SOLD OUT' : 'BUY TICKET'
     }
   });
-  // removeBuyTicket.addEventListener('click', removeMovieProfile)
+
+  removeBuyTicket.addEventListener('click', e => {
+    fetch(`http://localhost:3000/films/${movie.id}`, {
+        method: "DELETE",
+        body: JSON.stringify(movie),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      location.reload();
+
+  })
 }
 
-function buyMovieTicket(event) {
-  // console.log(event.target)
-}
-
-// function isMovieSoldOut (movie) {
-//    return movie.capacity === movie.tickets_sold
-
-// }
